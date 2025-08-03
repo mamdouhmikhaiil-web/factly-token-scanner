@@ -75,9 +75,9 @@
       document.getElementById("results").innerHTML = "<p>⏳ Scanning tokens...</p>";
 
       try {
-        const res = await fetch("https://factly-proxy.vercel.app/api/tokens");
+        const res = await fetch("https://factly-api.vercel.app/api/tokens");
         const data = await res.json();
-        const tokens = data.pairs.slice(0, 5);
+        const tokens = data.pairs.slice(0, 5); // عرض أول 5 توكنات فقط
 
         let html = "";
         tokens.forEach(token => {
