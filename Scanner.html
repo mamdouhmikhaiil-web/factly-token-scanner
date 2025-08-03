@@ -75,7 +75,7 @@
       document.getElementById("results").innerHTML = "<p>⏳ Scanning tokens...</p>";
 
       try {
-        const res = await fetch("https://api.dexscreener.com/latest/dex/pairs/bsc");
+        const res = await fetch("https://factly-proxy.vercel.app/api/tokens");
         const data = await res.json();
         const tokens = data.pairs.slice(0, 5);
 
